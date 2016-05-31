@@ -1,0 +1,48 @@
+Car id: 1235
+Vehicle Command:
+curl http://gmapi.azurewebsites.net/getVehicleInfoService -X POST -H 'Content-Type: application/json' -d '{"id": "1235", "responseType": "JSON"}'
+
+Response:
+{"service":"getVehicleInfo","status":"200","data":{"vin":{"type":"String","value":"1235AZ91XP"},"color":{"type":"String","value":"Forest Green"},"fourDoorSedan":{"type":"Boolean","value":"False"},"twoDoorCoupe":{"type":"Boolean","value":"True"},"driveTrain":{"type":"String","value":"electric"}}}
+
+
+Security Command:
+
+curl http://gmapi.azurewebsites.net/getSecurityStatusService -X POST -H 'Content-Type: application/json' -d '{"id": "1235", "responseType": "JSON"}'
+
+Response
+
+{"service":"getSecurityStatus","status":"200","data":{"doors":{"type":"Array","values":[{"location":{"type":"String","value":"frontLeft"},"locked":{"type":"Boolean","value":"True"}},{"location":{"type":"String","value":"frontRight"},"locked":{"type":"Boolean","value":"False"}}]}}}
+
+Fuel & Battery command:
+curl http://gmapi.azurewebsites.net/getEnergyService -X POST -H 'Content-Type: application/json' -d '{"id": "1235", "responseType": "JSON"}'
+
+Response
+{"service":"getEnergy","status":"200","data":{"tankLevel":{"type":"Null","value":"null"},"batteryLevel":{"type":"Number","value":"45.63"}}}
+
+Car id: 1234
+Vehicle Command:
+curl http://gmapi.azurewebsites.net/getVehicleInfoService -X POST -H 'Content-Type: application/json' -d '{"id": "1234", "responseType": "JSON"}'
+
+Response
+
+{"service":"getVehicleInfo","status":"200","data":{"vin":{"type":"String","value":"123123412412"},"color":{"type":"String","value":"Metallic Silver"},"fourDoorSedan":{"type":"Boolean","value":"True"},"twoDoorCoupe":{"type":"Boolean","value":"False"},"driveTrain":{"type":"String","value":"v8"}}}
+
+Security Command:
+
+curl http://gmapi.azurewebsites.net/getSecurityStatusService -X POST -H 'Content-Type: application/json' -d '{"id": "1234", "responseType": "JSON"}'
+
+Response
+
+{"service":"getSecurityStatus","status":"200","data":{"doors":{"type":"Array","values":[{"location":{"type":"String","value":"frontRight"},"locked":{"type":"Boolean","value":"False"}},{"location":{"type":"String","value":"backRight"},"locked":{"type":"Boolean","value":"False"}},{"location":{"type":"String","value":"frontLeft"},"locked":{"type":"Boolean","value":"False"}},{"location":{"type":"String","value":"backLeft"},"locked":{"type":"Boolean","value":"True"}}]}}}
+
+Fuel & Battery command:
+curl http://gmapi.azurewebsites.net/getEnergyService -X POST -H 'Content-Type: application/json' -d '{"id": "1234", "responseType": "JSON"}'
+
+Response
+
+{"service":"getEnergy","status":"200","data":{"tankLevel":{"type":"Number","value":"88.62"},"batteryLevel":{"type":"Null","value":"null"}}}
+
+
+
+

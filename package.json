@@ -1,0 +1,23 @@
+{
+  "name": "smartcarapi",
+  "version": "1.0.0",
+  "description": "smartcar api interacting with GM API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha api_test.js",
+    "start": "node server.js"
+  },
+  "author": "gangadhar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "chai": "^3.5.0",
+    "express": "^4.13.4",
+    "mocha": "^2.5.3",
+    "nodemon": "^1.9.2",
+    "proxyquire": "^1.7.9",
+    "request": "^2.72.0",
+    "sinon": "^1.17.4",
+    "supertest": "^1.2.0"
+  }
+}
